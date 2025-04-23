@@ -1,0 +1,1342 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "0x03. Git",
+      "cover": "/public/git-cover.png",
+      "quiz": [
+        {
+          "question": "<p>\n  You have the following files in your project directory:\n </p>\n <pre><code>julien@ubuntu:/tmp/git_project$ ls\n0-test  0-test~ #0-test# file1  file2\n</code></pre>\n <p>\n  You’ve edited\n  <code>\n   0-test\n  </code>\n  and you want to add it to your GitHub repo. What is the correct command to add\n  <strong>\n   only\n  </strong>\n  <code>\n   0-test\n  </code>\n  ?\n </p>",
+          "choices": [
+            {
+              "is_correct": false,
+              "text": " <p> <code> git add -N 0-test </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> git add . </code> </p> "
+            },
+            {
+              "is_correct": true,
+              "text": " <p> <code> git add 0-test </code> </p> "
+            }
+          ]
+        },
+        {
+          "question": "<p>\n  What command can you use to see what changes have been staged, which haven’t, and which files aren’t being tracked by Git?\n </p>",
+          "choices": [
+            {
+              "is_correct": true,
+              "text": " <p> <code> git status </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> git init </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> git checkout </code> </p> "
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "id": "100039",
+          "title": "Struggling with the sandbox? Try this: Using Docker & WSL on your local host"
+        },
+        {
+          "id": "22",
+          "title": "Source code management"
+        },
+        {
+          "id": "6",
+          "title": "Right-engineering, right-documenting"
+        },
+        {
+          "id": "100035",
+          "title": "Authenticating Git"
+        },
+        {
+          "id": "57",
+          "title": "Git and Github cheat sheet - Everything in less than 30 seconds"
+        }
+      ],
+      "desc": "<div class=\"panel-body\">\n <h2>\n  Resources\n </h2>\n <p>\n  <strong>\n   Read or watch:\n  </strong>\n </p>\n <ul>\n  <li>\n   <a href=\"https://docs.github.com/en/get-started/git-basics/set-up-git\" target=\"_blank\" title=\"Resources to learn Git\">\n    Resources to learn Git\n   </a>\n  </li>\n  <li>\n   <a href=\"https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes\" target=\"_blank\" title=\"About READMEs\">\n    About READMEs\n   </a>\n  </li>\n  <li>\n   <a href=\"https://cbea.ms/git-commit/\" target=\"_blank\" title=\"How to write a Git commit message\">\n    How to write a Git commit message\n   </a>\n  </li>\n </ul>\n <p>\n  <strong>\n   Resources for advanced tasks\n  </strong>\n  (Read only after finishing the mandatory tasks):\n </p>\n <ul>\n  <li>\n   <a href=\"https://learngitbranching.js.org/\" target=\"_blank\" title=\"Learning branching\">\n    Learning branching\n   </a>\n  </li>\n  <li>\n   <a href=\"https://codeinthehole.com/tips/pull-requests-and-other-good-practices-for-teams-using-github/\" target=\"_blank\" title=\"Effective pull requests and other good practices for teams using GitHub\">\n    Effective pull requests and other good practices for teams using GitHub\n   </a>\n  </li>\n </ul>\n <h2>\n  Learning Objectives\n </h2>\n <p>\n  At the end of this project, you are expected to be able to\n  <a href=\"https://fs.blog/feynman-technique/\" target=\"_blank\" title=\"explain to anyone\">\n   explain to anyone\n  </a>\n  ,\n  <strong>\n   without the help of Google\n  </strong>\n  :\n </p>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   What is source code management\n  </li>\n  <li>\n   What is Git\n  </li>\n  <li>\n   What is GitHub\n  </li>\n  <li>\n   What is the difference between Git and GitHub\n  </li>\n  <li>\n   How to create a repository\n  </li>\n  <li>\n   What is a README\n  </li>\n  <li>\n   How to write good READMEs\n  </li>\n  <li>\n   How to commit\n  </li>\n  <li>\n   How to write helpful commit messages\n  </li>\n  <li>\n   How to push code\n  </li>\n  <li>\n   How to pull updates\n  </li>\n  <li>\n   How to create a branch\n  </li>\n  <li>\n   How to merge branches\n  </li>\n  <li>\n   How to work as collaborators on a project\n  </li>\n  <li>\n   Which files should and which files should not appear in your repo\n  </li>\n </ul>\n <h3>\n  Copyright - Plagiarism\n </h3>\n <ul>\n  <li>\n   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.\n  </li>\n  <li>\n   You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.\n  </li>\n  <li>\n   You are not allowed to publish any content of this project.\n  </li>\n  <li>\n   Any form of plagiarism is strictly forbidden and will result in removal from the program.\n  </li>\n </ul>\n <h2>\n  Requirements\n </h2>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file at the root of the\n   <code>\n    alx-zero_day\n   </code>\n   repo, containing a description of the repository\n  </li>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file, at the root of the folder of\n   <em>\n    this\n   </em>\n   project (i.e.\n   <code>\n    0x03-git\n   </code>\n   ), describing what this project is about\n  </li>\n  <li>\n   <strong>\n    Do not use GitHub’s web UI\n   </strong>\n   , but the command line to perform the exercise (except for operations that can not possibly be done any other way than through the web UI). You won’t be able to perform many of the task requirements on the web UI, and you should start getting used to the command line for simple tasks because many complex tasks can only be done via the command line.\n  </li>\n  <li>\n   Your answer files should only contain the command, and nothing else\n  </li>\n </ul>\n <h2>\n  More Info\n </h2>\n <h3>\n  Basic usage\n </h3>\n <p>\n  At the end of this project you should be able to reproduce and understand these command lines:\n </p>\n <pre><code>$ git clone &lt;repo&gt;\n$ touch test\n$ git add test\n$ git commit -m \"Initial commit\"\n$ git push origin main\n</code></pre>\n</div>\n",
+      "tasks": [
+        {
+          "task_id": "9720",
+          "title": "0. Create and setup your Git and GitHub account",
+          "level": "mandatory",
+          "body_html": "<div>\n <h4>\n  Step 0 - Create an account on GitHub [if you do not have one already]\n </h4>\n <p>\n  You will need a GitHub account for all your projects at ALX. If you do not already have a github.com account, you can create an account for free\n  <a>\n   here\n  </a>\n </p>\n <h4>\n  Step 1 - Create a Personal Access Token on Github\n </h4>\n <p>\n  To have access to your repositories and authenticate yourself, you need to create a Personal Access Token on Github.\n </p>\n <p>\n  You can follow\n  <a>\n   this tutorial\n  </a>\n  to create a token.\n </p>\n <p>\n  Once it’s created, you should have a token that looks like this:\n </p>\n <p>\n  <img/>\n </p>\n <h4>\n  Step 2 - Update your profile on the Intranet\n </h4>\n <p>\n  Update your Intranet profile by adding your Github username\n  <a>\n   here\n  </a>\n </p>\n <p>\n  If it’s not done\n  <strong>\n   the Checker won’t be able to correct your work\n  </strong>\n </p>\n <p>\n  <img/>\n </p>\n <h4>\n  Step 3 - Create your first repository\n </h4>\n <p>\n  Using the graphic interface on the\n  <a>\n   github website\n  </a>\n  , create your first repository.\n </p>\n <ul>\n  <li>\n   Name:\n   <code>\n    alx-zero_day\n   </code>\n  </li>\n  <li>\n   Description:\n   <code>\n    I'm now a ALX Student, this is my first repository as a full-stack engineer\n   </code>\n  </li>\n  <li>\n   Public repo\n  </li>\n  <li>\n   No\n   <code>\n    README\n   </code>\n   ,\n   <code>\n    .gitignore\n   </code>\n   , or license\n  </li>\n </ul>\n <p>\n  <img/>\n </p>\n <h4>\n  Step 4 - Open the sandbox\n </h4>\n <p>\n  On the intranet, just under the task, click on the button\n  <img/>\n  and\n  <code>\n   run\n  </code>\n  to start the machine.\n </p>\n <p>\n  Once the container is started, click on\n  <img/>\n  to open a shell where you can start work from.\n </p>\n <h4>\n  Step 5 - Clone your repository\n </h4>\n <p>\n  On the webterm of the sandbox, do the following:\n </p>\n <ul>\n  <li>\n   Clone your repository\n  </li>\n </ul>\n <pre><code>root@896cf839cf9a:/# git clone https://{YOUR_PERSONAL_TOKEN}@github.com/{YOUR_USERNAME}/alx-zero_day.git                  \nCloning into 'alx-zero_day'...\nwarning: You appear to have cloned an empty repository.       \n</code></pre>\n <p>\n  <strong>\n   Replace {YOUR_PERSONAL_TOKEN} with your token from step 1\n  </strong>\n </p>\n <p>\n  <strong>\n   Replace {YOUR_USERNAME} with your username from step 0 and 1\n  </strong>\n </p>\n <p>\n  <strong>\n   Pro-Tip:\n  </strong>\n  On windows, use CTRL + A + V to paste in the web terminal\n </p>\n <h4>\n  Step 6 - Create the README.md and push the modifications\n </h4>\n <ul>\n  <li>\n   Navigate to this new directory.\n   <a>\n    Tips\n   </a>\n  </li>\n </ul>\n <pre><code>root@896cf839cf9a:/# cd alx-zero_day/\nroot@896cf839cf9a:/alx-zero_day#\n</code></pre>\n <ul>\n  <li>\n   Create the file\n   <code>\n    README.md\n   </code>\n   with the content\n   <code>\n    My first readme\n   </code>\n   .\n   <a>\n    Tips\n   </a>\n  </li>\n </ul>\n <pre><code>root@896cf839cf9a:/alx-zero_day# echo 'My first readme' &gt; README.md                                                                 \nroot@896cf839cf9a:/alx-zero_day# cat README.md                                                                                      \nMy first readme                                                                                                                       \n</code></pre>\n <ul>\n  <li>\n   Update your git identity\n  </li>\n </ul>\n <pre><code>root@896cf839cf9a:/alx-pre_course# git config --global user.email \"you@example.com\"\nroot@896cf839cf9a:/alx-pre_course# git config --global user.name \"Your Name\"\n</code></pre>\n <ul>\n  <li>\n   Add this new file to git, commit the change with this message “My first commit” and push to the remote server / origin\n  </li>\n </ul>\n <pre><code>root@896cf839cf9a:/alx-zero_day# git add .\nroot@896cf839cf9a:/alx-zero_day# git commit -m 'My first commit'\n[master (root-commit) 98eef93] My first commit\n 1 file changed, 1 insertion(+)\n create mode 100644 README.md\nroot@896cf839cf9a:/alx-zero_day# git push                                                                                           \nEnumerating objects: 3, done.                                                                                                         \nCounting objects: 100% (3/3), done.                                                                                                   \nWriting objects: 100% (3/3), 212 bytes | 212.00 KiB/s, done.                                                                          \nTotal 3 (delta 0), reused 0 (delta 0)                                                                                                 \nTo https://github.com/{YOUR_USERNAME}/alx-zero_day.git                                                                                       \n * [new branch]      master -&gt; master              \n</code></pre>\n <p>\n  Good job!\n </p>\n <p>\n  You pushed your first file in your\n  <strong>\n   first repository\n  </strong>\n  of the\n  <strong>\n   first task\n  </strong>\n  of your\n  <strong>\n   first ALX School project\n  </strong>\n  .\n </p>\n <p>\n  You can now check your repository on GitHub to see if everything is good.\n </p>\n</div>",
+          "file_info": null,
+          "checks": [
+            {
+              "title": "<p>Repository <code>alx-zero_day</code> exists</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>README.md exists</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>README.md is not empty</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "3903",
+          "title": "1. Repo-session",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a new directory called\n  <code>\n   0x03-git\n  </code>\n  in your\n  <code>\n   alx-zero_day\n  </code>\n  repo.\n </p>\n <p>\n  Make sure you include a not empty\n  <code>\n   README.md\n  </code>\n  in your directory:\n </p>\n <ul>\n  <li>\n   at the root of your repository\n   <code>\n    alx-zero_day\n   </code>\n  </li>\n  <li>\n   AND in the directory\n   <code>\n    0x03-git\n   </code>\n  </li>\n </ul>\n <p>\n  And important part:\n  <strong>\n   Make sure your commit and push your code to Github - otherwise the Checker will always fail.\n  </strong>\n </p>\n</div>",
+          "file_info": null,
+          "checks": [
+            {
+              "title": "<p>Directory <code>0x03-git</code> exists in <code>alx-zero_day</code> repo</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>README.md exists</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>README.md is not empty</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "742",
+          "title": "2. Coding fury road",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  For the moment we have an empty project directory containing only a\n  <code>\n   README.md\n  </code>\n  . It’s time to code!\n </p>\n <ul>\n  <li>\n   Create these directories at the root of your project:\n   <code>\n    bash\n   </code>\n   ,\n   <code>\n    c\n   </code>\n   ,\n   <code>\n    js\n   </code>\n  </li>\n  <li>\n   Create these empty files:\n   <ul>\n    <li>\n     <code>\n      c/c_is_fun.c\n     </code>\n    </li>\n    <li>\n     <code>\n      js/main.js\n     </code>\n    </li>\n    <li>\n     <code>\n      js/index.js\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Create a file\n   <code>\n    bash/alx\n   </code>\n   with these two lines inside:\n   <code>\n    #!/bin/bash\n   </code>\n   and\n   <code>\n    echo \"ALX\"\n   </code>\n  </li>\n  <li>\n   Create a file\n   <code>\n    bash/school\n   </code>\n   with these two lines inside:\n   <code>\n    #!/bin/bash\n   </code>\n   and\n   <code>\n    echo \"School\"\n   </code>\n  </li>\n  <li>\n   Add all these new files to git\n  </li>\n  <li>\n   Commit your changes (message: “Starting to code today, so cool”) and push to the remote server\n  </li>\n </ul>\n</div>",
+          "file_info": {
+            "repo": "alx-zero_day",
+            "directory": "0x03-git",
+            "file": "bash/alx, bash/school, c/c_is_fun.c, js/main.js, js/index.js"
+          },
+          "checks": [
+            {
+              "title": "<p>Files exist</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Files not empty</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>Right commit message</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "743",
+          "title": "3. Collaboration is the base of a company",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  A branch is like a copy of your project. It’s used mainly for:\n </p>\n <ul>\n  <li>\n   adding a feature in development\n  </li>\n  <li>\n   collaborating on the same project with other developers\n  </li>\n  <li>\n   not breaking your entire repository\n  </li>\n  <li>\n   not upsetting your co-workers\n  </li>\n </ul>\n <p>\n  The purpose of a branch is to isolate your work from the main code base of your project and/or from your co-workers’ work.\n </p>\n <p>\n  For this project, create a branch\n  <code>\n   update_script\n  </code>\n  and in this branch:\n </p>\n <ul>\n  <li>\n   Create an empty file named\n   <code>\n    bash/98\n   </code>\n  </li>\n  <li>\n   Update\n   <code>\n    bash/alx\n   </code>\n   by replacing\n   <code>\n    echo \"ALX\"\n   </code>\n   with\n   <code>\n    echo \"ALX School\"\n   </code>\n  </li>\n  <li>\n   Update\n   <code>\n    bash/school\n   </code>\n   by replacing\n   <code>\n    echo \"School\"\n   </code>\n   with\n   <code>\n    echo \"The school is open!\"\n   </code>\n  </li>\n  <li>\n   Add and commit these changes (message: “My personal work”)\n  </li>\n  <li>\n   Push this new branch\n   <a>\n    Tips\n   </a>\n  </li>\n </ul>\n <p>\n  Perfect! You did an amazing update in your project and it’s isolated correctly from the\n  <strong>\n   main\n  </strong>\n  branch.\n </p>\n <p>\n  Ho wait, your manager needs a quick fix in your project and it needs to be deployed now:\n </p>\n <ul>\n  <li>\n   Change branch to\n   <code>\n    main\n   </code>\n  </li>\n  <li>\n   Update the file\n   <code>\n    bash/alx\n   </code>\n   by replacing\n   <code>\n    echo \"ALX\"\n   </code>\n   with\n   <code>\n    echo \"ALX School is so cool!\"\n   </code>\n  </li>\n  <li>\n   Delete the directory\n   <code>\n    js\n   </code>\n  </li>\n  <li>\n   Commit your changes (message: “Hot fix”) and push to the origin\n  </li>\n </ul>\n <p>\n  Ouf, hot fix is done!\n </p>\n</div>",
+          "file_info": {
+            "repo": "alx-zero_day",
+            "directory": "0x03-git",
+            "file": "bash/alx, bash/school, bash/98"
+          },
+          "checks": [
+            {
+              "title": "<p>Change branch to <code>update_script</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Files exist</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>Change branch to <code>main</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 5,
+              "files": null
+            },
+            {
+              "title": "<p>Files not empty</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Directory <code>js</code> has been deleted</p>\n",
+              "points": 1,
+              "check_label": "Code",
+              "position": 14,
+              "files": null
+            },
+            {
+              "title": "<p>Commit message &ldquo;Hot fix&rdquo; available</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 15,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "744",
+          "title": "4. Collaboration: be up to date",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Of course, you can also work on the same branch as your co-workers and it’s best if you keep up to date with their changes.\n </p>\n <p>\n  For this task –\n  <strong>\n   and only for this task\n  </strong>\n  – please update your file\n  <code>\n   README.md\n  </code>\n  in the main branch from GitHub.com. It’s the\n  <strong>\n   only time\n  </strong>\n  you are allowed to update and commit from GitHub interface.\n </p>\n <p>\n  After you have done that, in your terminal:\n </p>\n <ul>\n  <li>\n   Get all changes of the main branch locally (i.e. your\n   <code>\n    README.md\n   </code>\n   file will be updated)\n  </li>\n  <li>\n   Create a new file\n   <code>\n    up_to_date\n   </code>\n   at the root of your directory and in it, write the git command line used\n  </li>\n  <li>\n   Add\n   <code>\n    up_to_date\n   </code>\n   to git, commit (message: “How to be up to date in git”), and push to the origin\n  </li>\n </ul>\n</div>",
+          "file_info": {
+            "repo": "alx-zero_day",
+            "directory": "0x03-git",
+            "file": "README.md, up_to_date"
+          },
+          "checks": [
+            {
+              "title": "<p>File <code>up_to_date</code> exists</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>File <code>up_to_date</code> has the right content</p>\n",
+              "points": 4,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "745",
+          "title": "5. HAAA what did you do???",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Collaboration is cool, but not really when you update the same file at the same time…\n </p>\n <p>\n  To illustrate that, please merge the branch\n  <code>\n   update_script\n  </code>\n  to\n  <code>\n   main\n  </code>\n  : “Cool, all my changes will be now part of the main branch, ready to be deployed!”\n </p>\n <p>\n  <strong>\n   HHHHHHHAAAAAAAA\n  </strong>\n </p>\n <pre><code>CONFLICT (content): Merge conflict in bash/alx\n</code></pre>\n <p>\n  As you can see, you have conflicts between two branches on the same file.\n </p>\n <p>\n  Your goal now is to resolve conflicts by using the version of the branch\n  <code>\n   update_script\n  </code>\n  , and push the result to the origin.\n </p>\n <p>\n  At the end, you should have all your work from the branch\n  <code>\n   update_script\n  </code>\n  (new file and two updated files) and all latest\n  <code>\n   main\n  </code>\n  commits (new files, delete folder, etc.),\n  <em>\n   without\n  </em>\n  conflicts.\n </p>\n</div>",
+          "file_info": null,
+          "checks": [
+            {
+              "title": "<p>Files exist</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Content of <code>bash/alx</code> is updated</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>Content of <code>bash/school</code> is updated</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>Folder deleted</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>No merge conflict markers in file</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 5,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "746",
+          "title": "6. Never push too much",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Create a\n  <code>\n   .gitignore\n  </code>\n  file and define a rule to never push\n  <code>\n   ~\n  </code>\n  files (generated by Emacs).\n  <a>\n   Tips\n  </a>\n </p>\n</div>",
+          "file_info": {
+            "repo": "alx-zero_day",
+            "directory": "0x03-git",
+            "file": ".gitignore"
+          },
+          "checks": [
+            {
+              "title": "<p>File <code>.gitignore</code> exists </p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p><code>.gitignore</code> contains <code>~</code></p>\n",
+              "points": 4,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "title": "0x03. Shell, init files, variables and expansions",
+      "cover": "/public/bash-cover.webp",
+      "quiz": [
+        {
+          "question": "<p>\n  Which command should I use to display a variable?\n </p>",
+          "choices": [
+            {
+              "is_correct": false,
+              "text": " <p> <code> cd $MYVAR </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> ls $MYVAR </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> export $MYVAR </code> </p> "
+            },
+            {
+              "is_correct": true,
+              "text": " <p> <code> echo $MYVAR </code> </p> "
+            }
+          ]
+        },
+        {
+          "question": "<p>\n  Which command should I use to define a new command\n  <code>\n   push\n  </code>\n  for pushing in Github?\n </p>\n <p>\n  Example:\n </p>\n <pre><code>$ push \nEverything up-to-date\n$\n</code></pre>",
+          "choices": [
+            {
+              "is_correct": false,
+              "text": " <p> <code> export push=\"git push\" </code> </p> "
+            },
+            {
+              "is_correct": true,
+              "text": " <p> <code> alias push=\"git push\" </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> alias push=git push </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> export push=git push </code> </p> "
+            }
+          ]
+        },
+        {
+          "question": "<p>\n  Which command should I use to display the exit code of the previous command?\n </p>",
+          "choices": [
+            {
+              "is_correct": false,
+              "text": " <p> <code> echo $EXITCODE </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> echo ? </code> </p> "
+            },
+            {
+              "is_correct": true,
+              "text": " <p> <code> echo $? </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> echo $CODE </code> </p> "
+            }
+          ]
+        },
+        {
+          "question": "<p>\n  What is the variable name who contains the previous working directory path?\n </p>",
+          "choices": [
+            {
+              "is_correct": false,
+              "text": " <p> <code> PREVPWD </code> </p> "
+            },
+            {
+              "is_correct": true,
+              "text": " <p> <code> OLDPWD </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> OLDDIR </code> </p> "
+            },
+            {
+              "is_correct": false,
+              "text": " <p> <code> PREVDIR </code> </p> "
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "id": "100039",
+          "title": "Struggling with the sandbox? Try this: Using Docker & WSL on your local host"
+        }
+      ],
+      "desc": "<div class=\"panel-body\">\n <h2>\n  Resources\n </h2>\n <p>\n  <strong>\n   Read or watch\n  </strong>\n  :\n </p>\n <ul>\n  <li>\n   <a href=\"http://linuxcommand.org/lc3_lts0080.php\" target=\"_blank\" title=\"Expansions\">\n    Expansions\n   </a>\n  </li>\n  <li>\n   <a href=\"https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html\" target=\"_blank\" title=\"Shell Arithmetic\">\n    Shell Arithmetic\n   </a>\n  </li>\n  <li>\n   <a href=\"https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html\" target=\"_blank\" title=\"Variables\">\n    Variables\n   </a>\n  </li>\n  <li>\n   <a href=\"https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_01.html\" target=\"_blank\" title=\"Shell initialization files\">\n    Shell initialization files\n   </a>\n  </li>\n  <li>\n   <a href=\"https://www.linfo.org/alias.html\" target=\"_blank\" title=\"The alias Command\">\n    The alias Command\n   </a>\n  </li>\n  <li>\n   <a href=\"https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2021/6/9112669886fd446a2aa3113c31319d1f468dc160.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250325%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250325T022128Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b1efa9f174ea61426bff5394991c412608698270c0bd160be96a0673d95dd176\" target=\"_blank\" title=\"Technical Writing\">\n    Technical Writing\n   </a>\n  </li>\n </ul>\n <p>\n  <strong>\n   man or help\n  </strong>\n  :\n </p>\n <ul>\n  <li>\n   <code>\n    printenv\n   </code>\n  </li>\n  <li>\n   <code>\n    set\n   </code>\n  </li>\n  <li>\n   <code>\n    unset\n   </code>\n  </li>\n  <li>\n   <code>\n    export\n   </code>\n  </li>\n  <li>\n   <code>\n    alias\n   </code>\n  </li>\n  <li>\n   <code>\n    unalias\n   </code>\n  </li>\n  <li>\n   <code>\n    .\n   </code>\n  </li>\n  <li>\n   <code>\n    source\n   </code>\n  </li>\n  <li>\n   <code>\n    printf\n   </code>\n  </li>\n </ul>\n <h2>\n  Learning Objectives\n </h2>\n <p>\n  At the end of this project, you are expected to be able to\n  <a href=\"https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg\" target=\"_blank\" title=\"explain to anyone\">\n   explain to anyone\n  </a>\n  ,\n  <strong>\n   without the help of Google\n  </strong>\n  :\n </p>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   What happens when you type\n   <code>\n    $ ls -l *.txt\n   </code>\n  </li>\n </ul>\n <h3>\n  Shell Initialization Files\n </h3>\n <ul>\n  <li>\n   What are the\n   <code>\n    /etc/profile\n   </code>\n   file and the\n   <code>\n    /etc/profile.d\n   </code>\n   directory\n  </li>\n  <li>\n   What is the\n   <code>\n    ~/.bashrc\n   </code>\n   file\n  </li>\n </ul>\n <h3>\n  Variables\n </h3>\n <ul>\n  <li>\n   What is the difference between a local and a global variable\n  </li>\n  <li>\n   What is a reserved variable\n  </li>\n  <li>\n   How to create, update and delete shell variables\n  </li>\n  <li>\n   What are the roles of the following reserved variables: HOME, PATH, PS1\n  </li>\n  <li>\n   What are special parameters\n  </li>\n  <li>\n   What is the special parameter\n   <code>\n    $?\n   </code>\n   ?\n  </li>\n </ul>\n <h3>\n  Expansions\n </h3>\n <ul>\n  <li>\n   What is expansion and how to use them\n  </li>\n  <li>\n   What is the difference between single and double quotes and how to use them properly\n  </li>\n  <li>\n   How to do command substitution with\n   <code>\n    $()\n   </code>\n   and backticks\n  </li>\n </ul>\n <h3>\n  Shell Arithmetic\n </h3>\n <ul>\n  <li>\n   How to perform arithmetic operations with the shell\n  </li>\n </ul>\n <h3>\n  The\n  <code>\n   alias\n  </code>\n  Command\n </h3>\n <ul>\n  <li>\n   How to create an alias\n  </li>\n  <li>\n   How to list aliases\n  </li>\n  <li>\n   How to temporarily disable an alias\n  </li>\n </ul>\n <h3>\n  Other\n  <code>\n   help\n  </code>\n  pages\n </h3>\n <ul>\n  <li>\n   How to execute commands from a file in the current shell\n  </li>\n </ul>\n <h3>\n  Copyright - Plagiarism\n </h3>\n <ul>\n  <li>\n   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.\n  </li>\n  <li>\n   You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.\n  </li>\n  <li>\n   You are not allowed to publish any content of this project.\n  </li>\n  <li>\n   Any form of plagiarism is strictly forbidden and will result in removal from the program.\n  </li>\n </ul>\n <h2>\n  Requirements\n </h2>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   Allowed editors:\n   <code>\n    vi\n   </code>\n   ,\n   <code>\n    vim\n   </code>\n   ,\n   <code>\n    emacs\n   </code>\n  </li>\n  <li>\n   All your scripts will be tested on Ubuntu 20.04 LTS\n  </li>\n  <li>\n   All your scripts should be exactly two lines long (\n   <code>\n    $ wc -l file\n   </code>\n   should print 2)\n  </li>\n  <li>\n   All your files should end with a new line (\n   <a href=\"http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789\">\n    why?\n   </a>\n   )\n  </li>\n  <li>\n   The first line of all your files should be exactly\n   <code>\n    #!/bin/bash\n   </code>\n  </li>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file, at the root of the folder of the project, describing what each script is doing\n  </li>\n  <li>\n   You are not allowed to use\n   <code>\n    &amp;&amp;\n   </code>\n   ,\n   <code>\n    ||\n   </code>\n   or\n   <code>\n    ;\n   </code>\n  </li>\n  <li>\n   You are not allowed to use\n   <code>\n    bc\n   </code>\n   ,\n   <code>\n    sed\n   </code>\n   or\n   <code>\n    awk\n   </code>\n  </li>\n  <li>\n   All your files must be executable\n  </li>\n </ul>\n <h2>\n  More Info\n </h2>\n <p>\n  Read your\n  <code>\n   /etc/profile\n  </code>\n  ,\n  <code>\n   /etc/inputrc\n  </code>\n  and\n  <code>\n   ~/.bashrc\n  </code>\n  files.\n </p>\n <p>\n  Look at some files in the\n  <code>\n   /etc/profile.d\n  </code>\n  directory.\n </p>\n <p>\n  Note: You do not have to learn about\n  <code>\n   awk\n  </code>\n  ,\n  <code>\n   tar\n  </code>\n  ,\n  <code>\n   bzip2\n  </code>\n  ,\n  <code>\n   date\n  </code>\n  ,\n  <code>\n   scp\n  </code>\n  ,\n  <code>\n   ulimit\n  </code>\n  ,\n  <code>\n   umask\n  </code>\n  , or shell scripting, yet.\n </p>\n</div>\n",
+      "tasks": [
+        {
+          "task_id": "789",
+          "title": "0. <o>",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that creates an alias.\n </p>\n <ul>\n  <li>\n   Name:\n   <code>\n    ls\n   </code>\n  </li>\n  <li>\n   Value:\n   <code>\n    rm *\n   </code>\n  </li>\n </ul>\n <pre><code>julien@ubuntu:/tmp/0x03$ ls\n0-alias  file1  file2\njulien@ubuntu:/tmp/0x03$ source ./0-alias \njulien@ubuntu:/tmp/0x03$ ls\njulien@ubuntu:/tmp/0x03$ \\ls\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "0-alias"
+          },
+          "checks": [
+            {
+              "title": "<p>README.md exists and is not empty</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 5,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": [
+                {
+                  "name": "test_alias.sh",
+                  "url": "projects/209/files/789_test_alias.sh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "790",
+          "title": "1. Hello you",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that prints\n  <code>\n   hello user\n  </code>\n  , where user is the current Linux user.\n </p>\n <pre><code>julien@ubuntu:/tmp/0x03$ id\nuid=1000(julien) gid=1000(julien) groups=1000(julien),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)\njulien@ubuntu:/tmp/0x03$ ./1-hello_you \nhello julien\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "1-hello_you"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "791",
+          "title": "2. The path to success is to take massive, determined action",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Add\n  <code>\n   /action\n  </code>\n  to the\n  <code>\n   PATH\n  </code>\n  .\n  <code>\n   /action\n  </code>\n  should be the last directory the shell looks into when looking for a program.\n </p>\n <pre><code>julien@ubuntu:/tmp/0x03$ echo $PATH\n/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\njulien@ubuntu:/tmp/0x03$ source ./2-path \njulien@ubuntu:/tmp/0x03$ echo $PATH\n/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/action\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "2-path"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "792",
+          "title": "3. If the path be beautiful, let us not ask where it leads",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that counts the number of directories in the\n  <code>\n   PATH\n  </code>\n  .\n </p>\n <pre><code>julien@ubuntu:/tmp/0x03$ echo $PATH\n/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\njulien@ubuntu:/tmp/0x03$ . ./3-paths \n11\njulien@ubuntu:/tmp/0x03$ PATH=/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:::::/hello\njulien@ubuntu:/tmp/0x03$ . ./3-paths \n12\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "3-paths"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output of <code>$PATH</code></p>\n",
+              "points": 3,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output for <code>$PATH=/bin::::/home:/usr:::::/home/me</code></p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 11,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "793",
+          "title": "4. Global variables",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that lists environment variables.\n </p>\n <pre><code>julien@ubuntu:/tmp/0x03$ source ./4-global_variables\nCC=gcc\nCDPATH=.:~:/usr/local:/usr:/\nCFLAGS=-O2 -fomit-frame-pointer\nCOLORTERM=gnome-terminal\nCXXFLAGS=-O2 -fomit-frame-pointer\nDISPLAY=:0\nDOMAIN=hq.garrels.be\ne=\nTOR=vi\nFCEDIT=vi\nFIGNORE=.o:~\nG_BROKEN_FILENAMES=1\nGDK_USE_XFT=1\nGDMSESSION=Default\nGNOME_DESKTOP_SESSION_ID=Default\nGTK_RC_FILES=/etc/gtk/gtkrc:/nethome/franky/.gtkrc-1.2-gnome2\nGWMCOLOR=darkgreen\nGWMTERM=xterm\nHISTFILESIZE=5000\nhistory_control=ignoredups\nHISTSIZE=2000\nHOME=/nethome/franky\nHOSTNAME=octarine.hq.garrels.be\nINPUTRC=/etc/inputrc\nIRCNAME=franky\nJAVA_HOME=/usr/java/j2sdk1.4.0\nLANG=en_US\nLDFLAGS=-s\nLD_LIBRARY_PATH=/usr/lib/mozilla:/usr/lib/mozilla/plugins\nLESSCHARSET=latin1\nLESS=-edfMQ\nLESSOPEN=|/usr/bin/lesspipe.sh %s\nLEX=flex\nLOCAL_MACHINE=octarine\nLOGNAME=franky\n[...]\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "4-global_variables"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "794",
+          "title": "5. Local variables",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that lists all local variables and environment variables, and functions.\n </p>\n <pre><code>julien@ubuntu:/tmp/0x03$ . ./5-local_variables\nBASH=/bin/bash\nBASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:histappend:interactive_comments:progcomp:promptvars:sourcepath\nBASH_ALIASES=()\nBASH_ARGC=()\nBASH_ARGV=()\nBASH_CMDS=()\nBASH_COMPLETION_COMPAT_DIR=/etc/bash_completion.d\nBASH_LINENO=()\nBASH_REMATCH=()\nBASH_SOURCE=()\nBASH_VERSINFO=([0]=\"4\" [1]=\"3\" [2]=\"46\" [3]=\"1\" [4]=\"release\" [5]=\"x86_64-pc-linux-gnu\")\nBASH_VERSION='4.3.46(1)-release'\nCLUTTER_IM_MODULE=xim\nCOLUMNS=133\nCOMPIZ_CONFIG_PROFILE=ubuntu\nCOMP_WORDBREAKS=$' \\t\\n\"\\'&gt;&lt;=;|&amp;(:'\nDBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Fg27Lr20bq\nDEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path\nDESKTOP_SESSION=ubuntu\n[...]\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "5-local_variables"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "795",
+          "title": "6. Local variable",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that creates a new local variable.\n </p>\n <ul>\n  <li>\n   Name:\n   <code>\n    BEST\n   </code>\n  </li>\n  <li>\n   Value:\n   <code>\n    School\n   </code>\n  </li>\n </ul>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "6-create_local_variable"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "796",
+          "title": "7. Global variable",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that creates a new global variable.\n </p>\n <ul>\n  <li>\n   Name:\n   <code>\n    BEST\n   </code>\n  </li>\n  <li>\n   Value:\n   <code>\n    School\n   </code>\n  </li>\n </ul>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "7-create_global_variable"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "76",
+          "title": "8. Every addition to true knowledge is an addition to human power",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Write a script that prints the result of the addition of 128 with the value stored in the environment variable\n  <code>\n   TRUEKNOWLEDGE\n  </code>\n  , followed by a new line.\n </p>\n <pre><code>julien@production-503e7013:~$ export TRUEKNOWLEDGE=1209\njulien@production-503e7013:~$ ./8-true_knowledge | cat -e\n1337$\njulien@production-503e7013:~$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "8-true_knowledge"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "77",
+          "title": "9. Divide and rule",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Write a script that prints the result of\n  <code>\n   POWER\n  </code>\n  divided by\n  <code>\n   DIVIDE\n  </code>\n  , followed by a new line.\n </p>\n <ul>\n  <li>\n   <code>\n    POWER\n   </code>\n   and\n   <code>\n    DIVIDE\n   </code>\n   are environment variables\n  </li>\n </ul>\n <pre><code>julien@production-503e7013:~$ export POWER=42784\njulien@production-503e7013:~$ export DIVIDE=32\njulien@production-503e7013:~$ ./9-divide_and_rule | cat -e\n1337$\njulien@production-503e7013:~$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "9-divide_and_rule"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "78",
+          "title": "10. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Write a script that displays the result of\n  <code>\n   BREATH\n  </code>\n  to the power\n  <code>\n   LOVE\n  </code>\n </p>\n <ul>\n  <li>\n   <code>\n    BREATH\n   </code>\n   and\n   <code>\n    LOVE\n   </code>\n   are environment variables\n  </li>\n  <li>\n   The script should display the result, followed by a new line\n  </li>\n </ul>\n <pre><code>julien@production-503e7013:~/$ export BREATH=4\njulien@production-503e7013:~/$ export LOVE=3\njulien@production-503e7013:~/$ ./10-love_exponent_breath\n64\njulien@production-503e7013:~/$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "10-love_exponent_breath"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "79",
+          "title": "11. There are 10 types of people in the world -- Those who understand binary, and those who don't",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Write a script that converts a number from base 2 to base 10.\n </p>\n <ul>\n  <li>\n   The number in base 2 is stored in the environment variable\n   <code>\n    BINARY\n   </code>\n  </li>\n  <li>\n   The script should display the number in base 10, followed by a new line\n  </li>\n </ul>\n <pre><code>julien@production-503e7013:~/$ export BINARY=10100111001\njulien@production-503e7013:~/$ ./11-binary_to_decimal\n1337\njulien@production-503e7013:~/$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "11-binary_to_decimal"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "797",
+          "title": "12. Combination",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Create a script that prints all possible combinations of two letters, except\n  <code>\n   oo\n  </code>\n  .\n </p>\n <ul>\n  <li>\n   Letters are lower cases, from\n   <code>\n    a\n   </code>\n   to\n   <code>\n    z\n   </code>\n  </li>\n  <li>\n   One combination per line\n  </li>\n  <li>\n   The output should be alpha ordered, starting with\n   <code>\n    aa\n   </code>\n  </li>\n  <li>\n   Do not print\n   <code>\n    oo\n   </code>\n  </li>\n  <li>\n   Your script file should contain maximum 64 characters\n  </li>\n </ul>\n <pre><code>julien@ubuntu:/tmp/0x03$ echo $((26 ** 2 -1))\n675\njulien@ubuntu:/tmp/0x03$ ./12-combinations | wc -l\n675\njulien@ubuntu:/tmp/0x03$ \njulien@ubuntu:/tmp/0x03$ ./12-combinations | tail -303 | head -10\noi\noj\nok\nol\nom\non\nop\noq\nor\nos\njulien@ubuntu:/tmp/0x03$ \n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "12-combinations"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 5,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "822",
+          "title": "13. Floats",
+          "level": "mandatory",
+          "body_html": "<div>\n <p>\n  Write a script that prints a number with two decimal places, followed by a new line.\n </p>\n <p>\n  The number will be stored in the environment variable\n  <code>\n   NUM\n  </code>\n  .\n </p>\n <pre><code>ubuntu@ip-172-31-63-244:~/0x03$ export NUM=0\nubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float\n0.00\nubuntu@ip-172-31-63-244:~/0x03$ export NUM=98\nubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float\n98.00\nubuntu@ip-172-31-63-244:~/0x03$ export NUM=3.14159265359\nubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float\n3.14\nubuntu@ip-172-31-63-244:~/0x03$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "13-print_float"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output - complex</p>\n",
+              "points": 3,
+              "check_label": "Code",
+              "position": 11,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "80",
+          "title": "14. Decimal to Hexadecimal",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Write a script that converts a number from base 10 to base 16.\n </p>\n <ul>\n  <li>\n   The number in base 10 is stored in the environment variable\n   <code>\n    DECIMAL\n   </code>\n  </li>\n  <li>\n   The script should display the number in base 16, followed by a new line\n  </li>\n </ul>\n <pre><code>julien@production-503e7013:~/$ export DECIMAL=16\njulien@production-503e7013:~/$ ./100-decimal_to_hexadecimal\n10\njulien@production-503e7013:~/$ export DECIMAL=1337\njulien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e\n539$\njulien@production-503e7013:~/$ export DECIMAL=15\njulien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e\nf$\njulien@production-503e7013:~/$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "100-decimal_to_hexadecimal"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Check output - complex</p>\n",
+              "points": 3,
+              "check_label": "Requirement",
+              "position": 11,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "42",
+          "title": "15. Everyone is a proponent of strong encryption",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.\n </p>\n <pre><code>julien@production-503e7013:~/shell/fun_with_the_shell$ cat quote\n\"Everyone is a proponent of strong encryption.\"\n- Dorothy E. Denning\njulien@production-503e7013:~/shell/fun_with_the_shell$ ./101-rot13 &lt; quote\n\"Rirelbar vf n cebcbarag bs fgebat rapelcgvba.\"\n- Qbebgul R. Qraavat\njulien@production-503e7013:~/shell/fun_with_the_shell$\n\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "101-rot13"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output - long text</p>\n",
+              "points": 3,
+              "check_label": "Code",
+              "position": 11,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "43",
+          "title": "16. The eggs of the brood need to be an odd number",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Write a script that prints every other line from the input, starting with the first line.\n </p>\n <pre><code>ubuntu@ip-172-31-63-244:/$ \\ls -1\nbin\nboot\ndev\netc\nhome\ninitrd.img\nlib\nlib32\nlib64\nlibx32\nlost+found\nmedia\nmnt\nopt\nproc\nroot\nrun\nsbin\nsrv\nsys\nt\n#t#\nt~\ntmp\nusr\nvar\nvmlinuz\nwhoareyou\nubuntu@ip-172-31-63-244:/$ \\ls -1 | ./102-odd\nbin\ndev\nhome\nlib\nlib64\nlost+found\nmnt\nproc\nrun\nsrv\nt\nt~\nusr\nvmlinuz\nubuntu@ip-172-31-63-244:/$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "102-odd"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Check output - special cases</p>\n",
+              "points": 3,
+              "check_label": "Requirement",
+              "position": 11,
+              "files": null
+            }
+          ]
+        },
+        {
+          "task_id": "81",
+          "title": "17. I'm an instant star. Just add water and stir.",
+          "level": "advanced",
+          "body_html": "<div>\n <p>\n  Write a shell script that adds the two numbers stored in the environment variables\n  <code>\n   WATER\n  </code>\n  and\n  <code>\n   STIR\n  </code>\n  and prints the result.\n </p>\n <ul>\n  <li>\n   <code>\n    WATER\n   </code>\n   is in base\n   <code>\n    water\n   </code>\n  </li>\n  <li>\n   <code>\n    STIR\n   </code>\n   is in base\n   <code>\n    stir.\n   </code>\n  </li>\n  <li>\n   The result should be in base\n   <code>\n    bestchol\n   </code>\n  </li>\n </ul>\n <pre><code>julien@production-503e7013:~$ export WATER=\"ewwatratewa\"\njulien@production-503e7013:~$ export STIR=\"ti.itirtrtr\"\njulien@production-503e7013:~$ ./103-water_and_stir\nshtbeolhc\njulien@production-503e7013:~$\n</code></pre>\n</div>",
+          "file_info": {
+            "repo": "alx-system_engineering-devops",
+            "directory": "0x03-shell_variables_expansions",
+            "file": "103-water_and_stir"
+          },
+          "checks": [
+            {
+              "title": "<p>File is present</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 1,
+              "files": null
+            },
+            {
+              "title": "<p>Must be 2 lines long</p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 2,
+              "files": null
+            },
+            {
+              "title": "<p>First line contains <code>#!/bin/bash</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 3,
+              "files": null
+            },
+            {
+              "title": "<p>You are not allowed to use <code>&amp;&amp;</code>, <code>||</code>, <code>;</code>, <code>sed</code> or <code>bc</code></p>\n",
+              "points": 0,
+              "check_label": "Requirement",
+              "position": 4,
+              "files": null
+            },
+            {
+              "title": "<p>Correct output</p>\n",
+              "points": 2,
+              "check_label": "Code",
+              "position": 10,
+              "files": null
+            },
+            {
+              "title": "<p>Check output - complex</p>\n",
+              "points": 1,
+              "check_label": "Requirement",
+              "position": 11,
+              "files": null
+            },
+            {
+              "title": "<p>Check output - complex 2</p>\n",
+              "points": 2,
+              "check_label": "Requirement",
+              "position": 12,
+              "files": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
