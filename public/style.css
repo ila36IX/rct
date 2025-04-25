@@ -1,0 +1,253 @@
+.container {
+  margin: auto 130px
+}
+
+.main {
+  position: relative;
+  z-index: 1
+}
+
+.main:after,.main:before {
+  background: linear-gradient(180deg,rgba(233,9,249,.05),hsla(0,0%,100%,.2) 15%,hsla(0,0%,100%,.2) 85%,rgba(233,9,249,.05));
+  content: "";
+  height: calc(100% + 35px);
+  position: absolute;
+  top: -25px;
+  width: 1px
+}
+
+.main:before {
+  left: 130px
+}
+
+.main:after {
+  right: 130px
+}
+
+*,:after,:before {
+  box-sizing: border-box
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+ol,ul {
+  list-style: none
+}
+
+html:focus-within {
+  scroll-behavior: smooth
+}
+
+a {
+  color: #fff;
+  text-decoration: none
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto
+}
+
+canvas,img,picture,svg,video {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle
+}
+
+button,input,select,textarea {
+  font: inherit
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer
+}
+
+body,html {
+  height: 100%
+}
+
+body,html {
+  scroll-behavior: smooth
+}
+
+body {
+  background: #0c0c12;
+  color: #fff;
+  font-family: Titillium Web,sans-serif
+}
+
+body::-webkit-scrollbar {
+  width: 7px
+}
+
+body::-webkit-scrollbar-track {
+  background: #2f2f47;
+  border-radius: 3px
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #951484;
+  border-radius: 3px
+}
+
+body.body--openMenu .brand,body.body--openMenu .hero,body.body--openMenu .main {
+  filter: blur(1px);
+  overflow: hidden
+}
+
+body .body {
+  height: 100vh;
+  position: relative
+}
+
+body .body:before {
+  background-image: url("https://arbaouimehdi.dev/static/noise-light-eabc004b11196092bef922bfa90b2b6d.webp");
+  background-repeat: repeat;
+  content: "";
+  height: 100%;
+  inset: 0;
+  opacity: .1;
+  pointer-events: none;
+  position: fixed;
+  visibility: visible;
+  width: 100%
+}
+
+body .body:after {
+  background-image: linear-gradient(180deg,#ff00d3 37%,#006668);
+  content: "";
+  filter: blur(160px);
+  height: 75%;
+  left: 50%;
+  opacity: .3;
+  position: fixed;
+  top: 3.5rem;
+  transform: translate(-50%) rotate(0) skew(0) skewY(0) scaleX(1) scaleY(1);
+  width: 85%;
+  z-index: 0
+}
+
+.markup p {
+  font-size: 20px;
+  margin: 15px 0 0px 25px;
+}
+.markup p a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #ff00d3;
+  text-underline-offset: 5px
+}
+
+.markup  a {
+  font-weight: 400;
+  color: #ff00d3;
+  text-underline-offset: 5px
+}
+
+.markup a:hover {
+  /*font-weight: 400;*/
+  text-decoration: underline;
+  text-decoration-color: #ff00d3;
+  color: #ff00d3;
+  text-underline-offset: 5px
+}
+
+.markup h1,.markup h2,.markup h3,.markup h4,.markup h5,.markup h6 {
+  margin-top: -70px;
+  padding-left: 25px;
+  padding-top: 90px;
+  transition: color .2s ease-in
+}
+
+.markup h2 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 34px
+}
+
+.markup h2:before {
+  content: "##";
+  margin-right: 26px;
+}
+
+.markup h3 {
+  font-size: 26px
+}
+
+.markup h3:before {
+  content: "###";
+  margin-right: 10px;
+}
+
+.markup ul {
+  font-size: 20px;
+  margin: 10px 0 10px 35px
+}
+
+.markup ul li {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='5' stroke='%23FF00D3' stroke-width='2'/%3E%3C/svg%3E");
+  background-position: 0 10px;
+  background-repeat: no-repeat;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  padding-left: 20px
+}
+
+.markup li {
+  counter-increment: list-counter;
+  padding-left: 30px;
+  position: relative
+}
+
+.markup ol li:before {
+  color: #ff00d3;
+  content: counter(list-counter) ".";
+  font-weight: 600;
+  left: 0;
+  position: absolute;
+  top: 0
+}
+
+.markup strong {
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 20px 0 15px;
+}
+
+.markup pre {
+  background-color: #000;
+  border-radius: 5px;
+  border: 1px solid #ff00d3;
+  font-family: monospace;
+  padding: 5px;
+  padding: 20px 40px;
+  margin-top: 1rem;
+}
+
+.markup pre code {
+  background-color: #000;
+  border-radius: 5px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  display:inline-block;
+  border: unset;
+}
+
+.markup code {
+  background-color: #000;
+  display:inline-block;
+  font-size: 1rem;
+  padding-inline: 4px;
+  border: 1px solid #ff00d3;
+}
